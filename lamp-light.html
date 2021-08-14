@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title></title>
+</head>
+<style type="text/css">
+  body {
+  background-color: #2c3e50;
+  text-align: center;
+}
+
+.button{
+    width: 162px;
+    height: 37px;
+    color: black;
+    background-color: #efdc55;
+    font-size: 20px;
+    font-family: fantasy;
+    box-shadow: 3px 3px 9px #efdc55;
+    margin-top: 10px;
+
+}
+.wrapper {
+  min-width: 700px;
+  font-size: 0;
+  margin-top: 40px;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.light-bulb {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+}
+.light-bulb .base {
+  display: inline-block;
+  position: relative;
+}
+.light-bulb .base .bulb {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  height: 320px;
+  background-color: #636363;;
+  box-shadow: 0 0 50px #636363;
+  border-radius: 100%;
+  transition: all .6s;
+}
+
+.white{
+  background-color: white!important;
+  box-shadow: 0 0 50px white!important;
+}
+
+.light-bulb .base .content {
+  position: relative;
+  z-index: 2;
+  width: 160px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: #555555;
+  margin: -25px auto 0;
+}
+.light-bulb .base .content .line {
+  width: 176px;
+  height: 14.54545px;
+  margin-bottom: 12.30769px;
+  margin-left: -8px;
+  border-radius: 20px;
+  background-color: #888888;
+}
+.light-bulb .base .footer {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 53.33333px;
+  margin-top: -26.66667px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  background-color: #333333;
+}
+</style>
+<body>
+
+  <div id="app">
+      
+
+      <div class="wrapper">  
+        <div  class="light-bulb">
+          <div class="base">
+            <div :class="{ white : attachedClass }" class="bulb"></div>
+            <div class="content">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="footer"></div>
+          </div>
+        </div>
+        <hr>
+        <button @click="attachedClass = !attachedClass"  class="button">AÇ/KAPA</button>
+      </div>
+      
+  </div>
+
+
+
+<script type="text/javascript">
+  
+  new Vue({
+      el : "#app",
+      data : {
+        attachedClass : false
+      }
+        
+})
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
